@@ -1,5 +1,6 @@
 MIT License
 
+Copyright (c) 2024 robertsi20 (concept_helpers/, experiment_helpers/)
 Copyright (c) 2026 jmeller01
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,3 +20,28 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+___
+
+Third-party code and data
+
+- concept_helpers/ and experiment_helpers/ are taken from
+  https://github.com/robertsi20/ConceptualizingConceptDrift (MIT), with one
+  changed line in helper_function.py (colour maps repeated for more than
+  32 concepts). paper_experiment_D1.csv and paper_experiment_D2.csv are the
+  result files from the same repository.
+- The occlusion functions in text_helpers/CraftText.py (calculate_u_values,
+  calculate_importance, occlusion_concepts_text) are adapted from
+  https://github.com/fanny-jourdan/cockatiel, which does not state a license.
+  Redistribution of these functions is therefore subject to the terms the
+  COCKATIEL authors may set.
+- The class FishHeadLoader in notebooks/images/hyperparams/
+  experiment_D3_hyperparams.ipynb and the file fish_head_embedding.npz come
+  from the drift localization work of Hinder et al.
+  (https://github.com/FabianHinder/Advanced-Drift-Localization, MIT) and were
+  provided by the supervisor. The embeddings are DINOv2 features of
+  ImageNet validation images.
+- The stability score (cosine_hungarian_loss in the ablation notebooks) is an
+  own implementation of the matching-based score of Fel et al. (2025)
+- Datasets and model checkpoints are downloaded from the Hugging Face Hub and
+  are not part of this repository.
